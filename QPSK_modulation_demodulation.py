@@ -5,8 +5,8 @@ from math import sqrt
 import random
 
 t = np.linspace(0,1,100)  # Time
-tb = 1;
-fc = 1;    # carrier frequency
+tb = 1
+fc = 1    # carrier frequency
 
 c1 = sqrt(2/tb)*np.cos(2*np.pi*fc*t)  # carrier frequency cosine wave
 c2 = sqrt(2/tb)*np.sin(2*np.pi*fc*t)  # carrier frequency sine wave
@@ -30,8 +30,8 @@ plt.show()
 
 
 m = []
-t1 = 0;
-t2 = tb;
+t1 = 0
+t2 = tb
 for i in range(16):
     m.append(random.uniform(0,1))   # message signal (binary)
     print(m[i])
@@ -80,8 +80,8 @@ ax3.set_ylabel('16 bits data')
 plt.title('Generation of message signal (Binary)')
 plt.show()
 
-## noise
 
+## noise
 
 noise = np.random.normal(0, 0.1, [16,100]) # noise using random function
 
@@ -96,10 +96,7 @@ plt.title('Noise signal which gets added to modulated wave')
 plt.show()
 
 
-
-
 ## demodulation
-
 
 t1 = 0
 t2 = tb
